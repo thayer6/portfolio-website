@@ -7,19 +7,19 @@ import {
   greeting,
   currentRoles,
   skillsSection,
-  openSource,
-  blogSection,
+  // openSource,
+  // blogSection,
   talkSection,
-  achievementSection
+  // achievementSection
 } from "../../portfolio";
 
 function Header() {
   const {isDark} = useContext(StyleContext);
   const viewExperience = currentRoles.display;
-  const viewOpenSource = openSource.display;
+  // const viewOpenSource = openSource.display;
   const viewSkills = skillsSection.display;
-  const viewAchievement = achievementSection.display;
-  const viewBlog = blogSection.display;
+  //  const viewAchievement = achievementSection.display;
+  // const viewBlog = blogSection.display;
   const viewTalks = talkSection.display;
 
   return (
