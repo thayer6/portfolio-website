@@ -292,7 +292,7 @@ const bigProjects = {
       footerLink: [
         {
           name: "Visit Website",
-          url: "http://womeninsportsdata.com/"
+          url: "http://womeninsportsdata.org/"
         }
         //  you can add extra buttons here.
       ]
