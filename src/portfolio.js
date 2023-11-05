@@ -26,7 +26,7 @@ const greeting = {
     "Lead Engineer (NBA) - Zelus Analytics"
   ),
   resumeLink:
-    "", // TODO: enter google drive link
+    "https://drive.google.com/file/d/1sRDcxCKhA7jfGqF72_IqXje28fdcDVvx/view?usp=drive_link", // TODO: enter google drive link
   // Set to empty to hide the button
   displayGreeting: true // Set false to hide this section, defaults to true
 };
@@ -51,9 +51,9 @@ const skillsSection = {
     emoji(
       "⚡ I build, automate, and deploy quantitative models to help NBA teams compete and win championships"
     ),
-    emoji("⚡ I help organize the Women in Sports Data Symposium, a game-changing initiative to amplify women's voices in sports analytics across the technical spectrum "),
+    emoji("⚡ I'm a co-organizer of the Women in Sports Data Symposium, a game-changing initiative to amplify women's voices in sports analytics across the technical spectrum "),
     emoji(
-      "⚡ When I'm not staring at my computer you can find me on the ski slopes, running with my dog, playing sports or watching my favorite teams play (Arsenal FC, Denver Nuggets, Denver Broncos, and the USWNT)"
+      "⚡ When I'm not tapping away on my keyboard you can find me on the ski slopes, running with my dog, playing sports or watching my favorite teams play (Arsenal FC, Denver Nuggets, Denver Broncos, and the USWNT)"
     )
   ],
 
@@ -135,12 +135,37 @@ const educationInfo = {
     {
       schoolName: "University of Puget Sound",
       logo: require("./assets/images/ups-logo.jpeg"),
-      subHeader: "Bachelor of Science in Molecular and Cellular Biology & Mathematics Minor",
+      subHeader: "BSc: Molecular & Cellular Biology | Minor: Mathematics",
       duration: "August 2010 - May 2014",
     }
   ]
 };
 
+// Accomplishments Section
+
+const accomplishmentInfo = {
+  display: true, // Set false to hide this section, defaults to true
+  category: [
+    {
+      name: "University of Washington",
+      logo: require("./assets/images/uw-logo-white.png"),
+      subHeader: "subtile",
+      duration: "duration",
+      descBullets: [
+        "bullet 1",
+        "",
+        "",
+        "",
+      ]
+    },
+    {
+      schoolName: "University of Puget Sound",
+      logo: require("./assets/images/ups-logo.jpeg"),
+      subHeader: "BSc: Molecular & Cellular Biology | Minor: Mathematics",
+      duration: "August 2010 - May 2014",
+    }
+  ]
+};
 // Your top 3 proficient stacks/tech experience
 
 const techStack = {
@@ -172,7 +197,7 @@ const workExperiences = {
       company: "Zelus Analytics",
       companylogo: require("./assets/images/zelus-logo.jpeg"),
       date: "Oct 2021 – Aug 2023",
-      desc: "Building sports intelligence platforms by creating, automating, and deploying quantitative models to help professional sports teams compete and win championships"
+      desc: "Built sports intelligence platforms by creating, automating, and deploying quantitative models to help professional sports teams compete and win championships"
     },
     {
       role: "Data Engineer / Scientist",
@@ -217,8 +242,10 @@ const currentRoles = {
       date: "August 2023 – Present",
       desc: "",
       descBullets: [
-        "",
-        ""
+        "Lead the system design, technical development, and product delivery of the NBA intelligence platform",
+        "Design and implement company-wide engineering architecture, driving improvements across multiple sport intelligence platforms",
+        "Collaborate with product and data science teams to define and manage implementation, validation, and deployment of quantitative models",
+        "Work closely with partner teams to refine our platform and provide the optimal value for their needs",
       ]
     },
   ]
@@ -227,7 +254,7 @@ const currentRoles = {
 // Some big projects you have worked on
 
 const bigProjects = {
-  title: "Volunteer Work",
+  title: "Community Impact",
   subtitle: "",
   projects: [
     {
@@ -245,7 +272,7 @@ const bigProjects = {
     {
       image: require("./assets/images/sia-logo.jpeg"),
       projectName: "Social Impact Analytics Institute",
-      projectDesc: "Non-Profit Founder, Senior Data Scientist (Former)",
+      projectDesc: "[Former] Non-Profit Founder, Senior Data Scientist",
     }
   ],
   display: true // Set false to hide this section, defaults to true
@@ -309,7 +336,7 @@ const achievementSection = {
       ]
     }
   ],
-  display: false // Set false to hide this section, defaults to true
+  display: true // Set false to hide this section, defaults to true
 };
 
 // Blogs Section
@@ -339,7 +366,7 @@ const blogSection = {
 // Talks Sections
 
 const talkSection = {
-  title: "Talks / Media",
+  title: "Professional Contributions",
   subtitle: emoji(
     ""
   ),
@@ -353,12 +380,17 @@ const talkSection = {
     {
       title: "🎙️ World Cup Quarterfinals (with Arielle Dror)",
       subtitle: "Guest - The Double Pivot",
-      url: "",
+      url: "https://open.spotify.com/episode/52r1dKhCgBUi1QNHrxdzAv?si=aEIswF0FQ_2dyEgsTImydw",
     },
     {
-      title: "🗣️ Agile Infrastructure for Building and Deploying ML models for NBA teams",
+      title: "🗣️ Agile Infrastructure Used To Deploy ML Models For NBA Teams",
       subtitle: "Technical Talk - WiDS NYC @ Buzzer",
-      url: "",
+      url: "https://www.youtube.com/watch?v=ETnbTTQyTH8&t=7431s",
+    },
+    {
+      title: "📝 Publication in Journal of Clinical Investigation Insights",
+      subtitle: "3rd Author, 2022",
+      url: "https://pubmed.ncbi.nlm.nih.gov/35803696/",
     },
     {
       title: "🗣️ Software Engineering for Sports Analytics",
@@ -411,6 +443,7 @@ export {
   openSource,
   currentRoles,
   bigProjects,
+  accomplishmentInfo,
   achievementSection,
   blogSection,
   talkSection,

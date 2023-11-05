@@ -1,0 +1,50 @@
+.accomplishments-heading {
+  font-size: 56px;
+  font-weight: 400;
+}
+
+.accomplishments-section {
+  display: flex;
+  flex-direction: column;
+  width: 90%;
+  padding: 20px 0px;
+  margin: 0px auto;
+  margin-top: 2rem;
+}
+
+.accomplishments-section > * {
+  flex: 1;
+  margin-bottom: 30px;
+}
+
+.accomplishments-card-container {
+  display: flex;
+  flex-direction: column;
+  padding-top: 20px;
+}
+
+@media (max-width: 1380px) {
+  .accomplishments-card-container {
+    padding-top: 0px;
+  }
+  .accomplishments-heading {
+    font-size: 40px;
+  }
+  .accomplishments-text-subtitle {
+    font-size: 18px;
+    text-align: center;
+  }
+}
+
+@media (max-width: 768px) {
+  .accomplishments-card-container {
+    padding-top: 0px;
+  }
+  .accomplishments-heading {
+    font-size: 30px;
+    text-align: center;
+  }
+  .accomplishments-text-subtitle {
+    font-size: 16px;
+  }
+}
