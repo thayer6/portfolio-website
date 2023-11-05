@@ -46,7 +46,7 @@ const socialMediaLinks = {
 
 const skillsSection = {
   title: "About Me",
-  subTitle: "subtitle",
+  subTitle: "",
   skills: [
     emoji(
       "⚡ I build, automate, and deploy quantitative models to help NBA teams compete and win championships"
