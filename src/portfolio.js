@@ -23,7 +23,7 @@ const greeting = {
   username: "Casey Thayer",
   title: "Casey Thayer",
   subTitle: emoji(
-    "Lead Engineer (NBA) - Zelus Analytics"
+    "Lead Engineer - Zelus Analytics"
   ),
   resumeLink:
     "https://drive.google.com/file/d/1sRDcxCKhA7jfGqF72_IqXje28fdcDVvx/view?usp=drive_link", // TODO: enter google drive link
@@ -46,14 +46,14 @@ const socialMediaLinks = {
 
 const skillsSection = {
   title: "About Me",
-  subTitle: "",
+  subTitle: "subtitle",
   skills: [
     emoji(
       "⚡ I build, automate, and deploy quantitative models to help NBA teams compete and win championships"
     ),
     emoji("⚡ I'm a co-organizer of the Women in Sports Data Symposium, a game-changing initiative to amplify women's voices in sports analytics across the technical spectrum "),
     emoji(
-      "⚡ When I'm not tapping away on my keyboard you can find me on the ski slopes, running with my dog, playing sports or watching my favorite teams play (Arsenal FC, Denver Nuggets, Denver Broncos, and the USWNT)"
+      "⚡ When I'm not tapping away on my keyboard you can find me on the ski slopes, running with my dog, playing sports or watching my favorite teams play:"
     )
   ],
 
@@ -118,6 +118,32 @@ https://fontawesome.com/icons?d=gallery */
       fontAwesomeClassname: "fab fa-node"
     },
   ],
+  favoriteSports: [
+    {
+      team: "Arsenal FC",
+      fontAwesomeClassname: "fas fa-futbol"
+    },
+    {
+      team: "Denver Nuggets",
+      fontAwesomeClassname: "fas fa-basketball-ball"
+    },
+    {
+      team: "USWNT",
+      fontAwesomeClassname: "fas fa-futbol"
+    },
+    {
+      team: "Seattle Storm",
+      fontAwesomeClassname: "fas fa-basketball-ball"
+    },
+    {
+      team: "Denver Broncos",
+      fontAwesomeClassname: "fas fa-football-ball"
+    },
+    {
+      team: "Colorado Buffaloes",
+      fontAwesomeClassname: "fas fa-football-ball"
+    },
+  ],
   display: true // Set false to hide this section, defaults to true
 };
 
@@ -144,13 +170,11 @@ const educationInfo = {
 // Accomplishments Section
 
 const accomplishmentInfo = {
-  display: true, // Set false to hide this section, defaults to true
+  display: false, // Set false to hide this section, defaults to true
   category: [
     {
-      name: "University of Washington",
-      logo: require("./assets/images/uw-logo-white.png"),
-      subHeader: "subtile",
-      duration: "duration",
+      name: "Technical",
+      logo: require("./assets/images/code.avif"),
       descBullets: [
         "bullet 1",
         "",
@@ -159,10 +183,14 @@ const accomplishmentInfo = {
       ]
     },
     {
-      schoolName: "University of Puget Sound",
-      logo: require("./assets/images/ups-logo.jpeg"),
-      subHeader: "BSc: Molecular & Cellular Biology | Minor: Mathematics",
-      duration: "August 2010 - May 2014",
+      name: "Leadership",
+      logo: require("./assets/images/leadership.jpeg"),
+      descBullets: [
+        "bullet 1",
+        "",
+        "",
+        "",
+      ]
     }
   ]
 };

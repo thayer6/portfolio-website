@@ -1,6 +1,7 @@
 import React, {useContext} from "react";
 import "./Skills.scss";
 import SoftwareSkill from "../../components/softwareSkills/SoftwareSkill";
+import Sports from "../../components/sports/Sports";
 import {illustration, skillsSection} from "../../portfolio";
 import {Fade} from "react-reveal";
 import codingPerson from "../../assets/lottie/codingPerson";
@@ -21,8 +22,8 @@ export default function Skills() {
               <DisplayLottie animationData={codingPerson} />
             ) : (
               <img
-                alt="Man Working"
-                src={require("../../assets/images/code-window-transparent.png")}
+                alt="Boulder Colorado"
+                src={require("../../assets/images/boulder.png")}
               ></img>
             )}
           </div>
@@ -60,6 +61,7 @@ export default function Skills() {
                 );
               })}
             </div>
+            <Sports/>
           </div>
         </Fade>
       </div>
