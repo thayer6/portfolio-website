@@ -23,6 +23,7 @@ export default function ExperienceCard({cardInfo, isDark}) {
           <li
             key={i}
             className={isDark ? "subTitle dark-mode-text" : "subTitle"}
+            style={{ marginBottom: '25px' }}
           >
             {item}
           </li>
