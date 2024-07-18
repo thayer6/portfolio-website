@@ -26,7 +26,7 @@ const greeting = {
     "Lead Engineer - Zelus Analytics"
   ),
   resumeLink:
-    "https://drive.google.com/file/d/1sRDcxCKhA7jfGqF72_IqXje28fdcDVvx/view?usp=drive_link", // TODO: enter google drive link
+    "https://drive.google.com/file/d/18cwVDla1wSw1C2oCaTs2_UItBGElrP1E/view?usp=drive_link",
   // Set to empty to hide the button
   displayGreeting: true // Set false to hide this section, defaults to true
 };
