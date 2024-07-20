@@ -1,41 +1,59 @@
-name: Build and Deploy
-env:
-  CI: false
-  GITHUB_USERNAME: ${{ github.repository_owner }}
-  REACT_APP_GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }} # This is automatically set by Github Actions
-  USE_GITHUB_DATA: "true"
-  MEDIUM_USERNAME: "saadpasta" # Change this to your medium username
+name: Build and Deploy to Render
+
 on:
-  workflow_dispatch:
   push:
     branches:
-      - master
-  schedule:
-    - cron: "0 12 * * 1" # see https://docs.github.com/en/actions/reference/events-that-trigger-workflows#scheduled-events
+      - main
+      - production
+  pull_request:
+    branches:
+      - main
+      - production
+
 jobs:
-  build-and-deploy:
+  build:
     runs-on: ubuntu-latest
+
     steps:
-      - name: Checkout 🛎️
-        uses: actions/checkout@v3 # If you're using actions/checkout@v3 you must set persist-credentials to false in most cases for the deployment to work correctly.
+      - name: Checkout repository
+        uses: actions/checkout@v2
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v2
         with:
-          persist-credentials: false
+          node-version: "14" # specify the Node.js version you are using
 
-      - name: Setup Node.js 🔧
-        uses: actions/setup-node@v3.8.1
+      - name: Install dependencies
+        run: npm install
+
+      - name: Run build script
+        run: npm run build
+
+      - name: Upload build artifacts
+        uses: actions/upload-artifact@v2
         with:
-          node-version: 18.x
+          name: build-artifacts
+          path: ./build # adjust the path to your build output directory if different
 
-      - name: Update npm 🚀
-        run: npm install -g npm@latest
+  deploy:
+    needs: build
+    runs-on: ubuntu-latest
 
-      - name: Install and Build 🔧 # Build the Project
+    steps:
+      - name: Download build artifacts
+        uses: actions/download-artifact@v2
+        with:
+          name: build-artifacts
+          path: ./build
+
+      - name: Deploy to Render
+        env:
+          RENDER_SERVICE_ID: ${{ secrets.RENDER_SERVICE_ID }}
+          RENDER_API_KEY: ${{ secrets.RENDER_API_KEY }}
         run: |
-          npm install
-          npm run build
-      - name: Deploy 🚀
-        uses: JamesIves/github-pages-deploy-action@v4
-        with:
-          GITHUB_TOKEN : ${{ secrets.GITHUB_TOKEN }} # This is provided by GitHub.
-          BRANCH: gh-pages # The branch the action should deploy to.
-          FOLDER: build # The folder the action should deploy.
+          curl -X POST \
+            -H "Authorization: Bearer $RENDER_API_KEY" \
+            -H "Accept: application/json" \
+            -H "Content-Type: application/json" \
+            -d '{"clearCache":true}' \
+            "https://api.render.com/v1/services/$RENDER_SERVICE_ID/deploys"
