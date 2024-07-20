@@ -26,7 +26,7 @@ const greeting = {
     "Lead Engineer - Zelus Analytics"
   ),
   resumeLink:
-    "https://drive.google.com/file/d/1sRDcxCKhA7jfGqF72_IqXje28fdcDVvx/view?usp=drive_link", // TODO: enter google drive link
+    "https://drive.google.com/file/d/18cwVDla1wSw1C2oCaTs2_UItBGElrP1E/view?usp=drive_link",
   // Set to empty to hide the button
   displayGreeting: true // Set false to hide this section, defaults to true
 };
@@ -232,21 +232,21 @@ const workExperiences = {
       company: "Bristol Myers Squibb",
       companylogo: require("./assets/images/bms-hand-logo.png"),
       date: "Mar 2020 – Oct 2021",
-      desc: "Established and implemented custom software to optimize data pipelines for teams developing & commercializing CAR-T cell therapies"
+      desc: "Innovating and implementing custom software solutions that optimized data pipelines for CAR-T cell therapy development"
     },
     {
       role: "Senior Research Associate",
       company: "Juno Therapeutics",
       companylogo: require("./assets/images/juno-little-logo.jpeg"),
       date: "Apr 2017 – Mar 2020",
-      desc: "Designed and executed lab experiments to create manufacturing processes for CAR-T cell therapy products"
+      desc: "Designed and conducted pivotal experiments for early CAR-T cell therapy development"
     },
     {
       role: "Research Technician I-II",
       company: "Fred Hutch Cancer Research Center",
       companylogo: require("./assets/images/fred-hutch-logo.png"),
       date: "Jan 2015 – Apr 2017",
-      desc: "Contributed to a cutting-edge flow cytometry laboratory in supporting global vaccine trials and innovating novel methods to drive HIV vaccine research"
+      desc: "Advanced cutting-edge flow cytometry techniques and supported global trials by innovating novel methods to drive vaccine research"
     }
   ]
 };
@@ -270,10 +270,12 @@ const currentRoles = {
       date: "August 2023 – Present",
       desc: "",
       descBullets: [
-        "Lead the system design, technical development, and product delivery of the NBA intelligence platform",
-        "Design and implement company-wide engineering architecture, driving improvements across multiple sport intelligence platforms",
-        "Collaborate with product and data science teams to define and manage implementation, validation, and deployment of quantitative models",
-        "Work closely with partner teams to refine our platform and provide the optimal value for their needs",
+        "Spearheading the engineering architecture development of spatiotemporal data-based NBA platform through application design and team management. Driving strategic initiatives across the engineering organization",
+        "Directing a basketball engineering team in agile sprint management, backlog refinement, and project prioritization with Jira",
+        "Guiding the design of event-driven architecture for biomechanical data processing, enhancing real-time capabilities",
+        "Collaborating with product and data science teams to streamline the implementation, validation, and deployment of 50+ models via cloud computing and containerization",
+        "Aligning internal roadmaps with external client requests by understanding the needs from key stakeholders of 5 NBA teams through regular meetings, monitoring pipeline performance, and keeping up with the changing vendor data landscape",
+        "Enhancing and expanding existing multi-sport engineering infrastructure across 5+ sports platforms",
       ]
     },
   ]
@@ -288,7 +290,7 @@ const bigProjects = {
     {
       image: require("./assets/images/women-in-sports-data.png"),
       projectName: "Women in Sports Data",
-      projectDesc: "Co-Organizer",
+      projectDesc: "Co-Founder",
       footerLink: [
         {
           name: "Visit Website",
